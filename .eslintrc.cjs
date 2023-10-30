@@ -31,6 +31,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier', 'react'],
   rules: {
+    semi: ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
     'react/prefer-stateless-function': 'off',
   },
