@@ -30,5 +30,8 @@ module.exports = {
     project: './tsconfig.json',
   },
   plugins: ['@typescript-eslint', 'prettier', 'react'],
-  rules: {},
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/prefer-stateless-function': 'off',
+  },
 }
