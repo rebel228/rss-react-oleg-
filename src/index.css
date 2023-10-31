@@ -15,7 +15,7 @@ html {
 body {
   color: #fff;
   background-color: black;
-  background-image: url('./assets/star_wars_background.jpeg');
+  background-image: url('./assets/background.jpeg');
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;

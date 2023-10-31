@@ -7,6 +7,7 @@ export default class Header extends React.Component<IAppProps> {
   public render() {
     return (
       <div>
+        <img style={{ maxWidth: 100 }} src="/logo.png" alt="logo" />
         <SearchForm />
       </div>
     );
