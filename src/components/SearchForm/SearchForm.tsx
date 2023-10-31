@@ -25,8 +25,7 @@ export default class SearchForm extends React.Component<IAppProps> {
       `https://www.narutodb.xyz/api/character/search?name=${searchQuery}`
     );
     if (response.ok) {
-      const data = await response.json();
-      console.log(data);
+      // const data = await response.json();
     } else {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

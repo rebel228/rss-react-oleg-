@@ -20,7 +20,7 @@ class App extends Component<IAppProps> {
   }
 
   async componentDidMount() {
-    this.toggleLoading();
+    // this.toggleLoading();
     let response;
     if (localStorage.getItem('searchQuery')) {
       response = await fetch(
@@ -29,9 +29,11 @@ class App extends Component<IAppProps> {
         )}`
       );
       const data = await response.json();
-      this.loadData(data);
+      const dataArr = [];
+      dataArr.push(data);
+      this.loadData(dataArr);
     } else {
-      response = await fetch('https://narutodb.xyz/api/character');
+      response = await fetch('https://www.narutodb.xyz/api/character');
       const data = await response.json();
       this.loadData(data.characters);
     }
@@ -55,7 +57,11 @@ class App extends Component<IAppProps> {
 
     return (
       <>
-        <Header />
+        <Header
+          findCharacter={this.loadData}
+          signRequest={this.setRequestState}
+          toggleLoad={this.toggleLoading}
+        />
         <Cards
           data={data}
           isLoading={isLoading}

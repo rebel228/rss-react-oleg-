@@ -1,9 +1,8 @@
 import * as React from 'react';
+import { ISearchProps } from '../../types';
 import SearchForm from '../SearchForm/SearchForm';
 
-export interface IAppProps {}
-
-export default class Header extends React.Component<IAppProps> {
+export default class Header extends React.Component<ISearchProps> {
   public render() {
     return (
       <div>
